@@ -16,26 +16,26 @@
 //       - _remainingSecondsの値を1減らす(デクリメントする)
 //       - タイマーの名前と現在の_remainingSecondsの値をconsole.logで出力する
 //     - _isRunningがfalse、もしくは_remainingSeconds以下のときは何もしない
-class KitchenTimer{
-    constructor(name){
+class KitchenTimer {
+    constructor(name) {
         this._name = name;
         this._remainingSeconds = 0;
         this._isRunning = false;
 
         window.setInterval(() => {
-            if(this._isRunning && this._remainingSeconds >= 1){
+            if (this._isRunning && this._remainingSeconds >= 1) {
                 this._remainingSeconds--;
                 console.log(`${this._name} : 残り時間${this._remainingSeconds}秒`);
-        }
-    }, 1000);
+            }
+        }, 1000);
     }
-    setSeconds(_remainingSeconds){
+    setSeconds(_remainingSeconds) {
         this._remainingSeconds = _remainingSeconds;
     }
-    start(){
+    start() {
         this._isRunning = true;
     }
-    stop(){
+    stop() {
         this._isRunning = false;
     }
 }
