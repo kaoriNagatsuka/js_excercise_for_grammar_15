@@ -29,12 +29,15 @@ class KitchenTimer {
             }
         }, 1000);
     }
+
     setSeconds(_remainingSeconds) {
         this._remainingSeconds = _remainingSeconds;
     }
+
     start() {
         this._isRunning = true;
     }
+
     stop() {
         this._isRunning = false;
     }
